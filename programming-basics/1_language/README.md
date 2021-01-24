@@ -6,12 +6,12 @@ Um sicherzustellen das wir alle denselben "Code-Style" haben und unsere Codes f√
 1. Brackets stehen vorzugseise in einer neuen Zeile:
 ```js
 // Falsch:
-funktion {
+funktion() {
     ...inhalt;
 }
 
 // Richtig:
-funktion
+funktion()
 {
     ...inhalt;
 }
@@ -75,6 +75,26 @@ console.log(testValue);
 // Richtig:
 const testValue = 5;
 console.log(testValue);
+```
+
+7. Wenn du deinen Code kommentierst, nutzt du bitte entweder Single-Line comments oder JSDoc comments.
+```js
+// Falsch:
+/* Dies ist ein Kommentar */
+/* 
+Dies ist ein Kommentar
+*/
+/*
+    Dies ist ein Kommentar
+*/
+
+// Richtig:
+// Dies ist ein Kommentar
+
+/***
+ * Dies ist ein
+ * Kommentar
+ */
 ```
 
 ## Strings

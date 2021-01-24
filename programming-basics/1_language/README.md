@@ -109,6 +109,19 @@ Du kannst sowohl einzelne Leerzeichen per `' ' + ' '` hinzufügen, aber auch Str
 'Dies ' + 'ist' + ' ein ' + 'String';
 ```
 
+### Escaping Strings
+Wenn wir einen String in mehrere Zeilen schreiben wollen können wir ihn mit "Newline" Escapen:
+```js
+// Newline: \n
+'Dies ist ein\nMultiline-String'
+// Dies ist ein
+// Multiline-String
+
+// Tabulator: \t
+'Dies\tist\tein\tString'
+// Dies     ist     ein     String
+```
+
 ### Multiple concats
 Du kannst mehrere Strings zu einem Einzelnen hinzufügen, indem du `.concat()` verwendest, und dann mehrere Strings per Komma trennst.
 
@@ -127,7 +140,7 @@ Geschrieben in Single-Quotes:
 ## Numbers
 Numbers beinhaltet verschiedene Arten von Zahlen, egal ob sie Dezimalstellen haben, oder nicht.
 
-### Positive oder Negative zahlen
+### Positive oder Negative Zahlen
 Du kannst jede Art von Zahl negativ oder positiv darstellen.
 
 ```js
@@ -156,7 +169,7 @@ Wenn du eine Zahl mehrfach mit sich selbst multiplizieren willst, musst du diese
 3 ** 5;
 ```
 
-### Punkt vor strich Rechnung
+### Punkt vor Strich Rechnung
 Wenn du eine Aufgabe wie `1 + 8 / 4 + 5` siehst, 
 denkst du vielleicht der Computer rechnet erst `1 + 8` und `4 + 5` zusammen um diese dann zu teilen, aber der Computer rechnet genau wie du es in der Schule gelernt hast, Punkt-vor-Strich rechnung, er sieht also als aufgabe `1 + 2 + 5`, da er die Division als erstes gelöst hat.
 

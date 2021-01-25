@@ -111,6 +111,23 @@ Wenn du mehrere Funktionen auf einen Wert anwendest, trennst du sie beim Punkt u
     .funktion3();
 ```
 
+9. Etwas mit JavaScript in der Konsole ausgeben
+
+Wenn du etwas in der Konsole ausgeben willst, zum Beispiel etwas aus einer Übungsaufgabe, dann gibst du den wert mit console.log() aus.
+```js
+const testValue = "Hallo Welt";
+
+console.log(testValue);
+```
+Du startest deine Datei indem du im Terminal schreibst
+
+```bash
+node dateiname.js
+
+// gibt aus: Hallo Welt
+```
+
+
 ## Strings
 Ein String ist eine Ansammlung von Buchstaben und Zeichen, dies können zum Beispiel Sätze, Wörter oder eine IBAN Adresse sein.
 

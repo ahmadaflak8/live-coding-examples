@@ -99,7 +99,7 @@ Dies ist ein Kommentar
 
 8. Aneinanderreihen von Funktionen
 
-Wenn du mehrere Funktionen auf einen Wert anwendest, trennst du sie beim Punkt und schreibst sie untereinander, mit 4 leerstellen abstand zum rand (oder 1 Tab).
+Wenn du mehrere Funktionen auf einen Wert anwendest, trennst du sie beim Punkt und schreibst sie untereinander, mit 4 Leerstellen Abstand zum Rand (oder 1 Tab).
 ```js
 // Falsch:
 'Dies ist ein String'.funktion1().funktion2().funktion3();

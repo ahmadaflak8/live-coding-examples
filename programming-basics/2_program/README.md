@@ -4,7 +4,7 @@
 
 Conditional Statments kontrollieren das verhalten von Code in JavaScript, indem sie entscheiden ob Code ausgeführt wird oder nicht.
 
-Ex gibt gibt 3 verschiedene Arten von Conditional Statements in Javascript:
+Es gibt gibt 3 verschiedene Arten von Conditional Statements in Javascript:
 
 - `if`: Wenn die Kondition `true` ergibt, wird der Code innerhalb des "if-Blocks" ausgeführt.
 - `else`: Wenn die oben angegebene Kondition `false` ergibtm wird der Code innerhalb des "else-Blocks" ausgeführt.

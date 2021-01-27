@@ -26,20 +26,24 @@ funktion()
 'Dies ist ein String';
 ```
 
-3. Variablennamen schreiben wir in camelCase und Funktions/Methoden-Namen in PascalCase:
+3. Variablennamen und Funktionennamen/Methodennamen schreiben wir in camelCase, Klassen in PascalCase:
 ```js
 // Falsch:
 var NewVariable;
 var NEW_VARIABLE;
 var New_Variable;
+var _newVariable;
+var _NewVariable;
 
-newfunction();
+_newfunction();
 new_Function();
+New_Function();
+NewFunction();
 
 // Richtig:
 var newVariable;
 
-NewFunction();
+newFunction();
 ```
 
 4. In Arrays und Objekten vor und nach den Werten fügen wir ein Leerzeichen ein:

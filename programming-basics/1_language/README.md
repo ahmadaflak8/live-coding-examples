@@ -131,6 +131,22 @@ node dateiname.js
 // gibt aus: Hallo Welt
 ```
 
+10. Benennung von Boolschen variablen
+
+Bei einem Boolean fragen wir nach, ob etwas wahr oder falsch ist, deswegen macht es sinn, dies im Namen der Variable wiederzuspiegeln.
+
+```js
+// Falsch:
+const visible = true;
+const equal = false;
+const encryption = true;
+
+// Richtig:
+const isVisible = true;
+const areEqual = false;
+const hasEncryption = true;
+```
+
 
 ## Strings
 Ein String ist eine Ansammlung von Buchstaben und Zeichen, dies können zum Beispiel Sätze, Wörter oder eine IBAN Adresse sein.

@@ -26,4 +26,3 @@
 
     parseFloat(testValue2);
     // returns 2.5
-

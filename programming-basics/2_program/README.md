@@ -49,6 +49,12 @@ else
 // ergibt: testValue ist eine andere zahl
 ```
 
+### Und, Oder in Conditional-Statements
+
+Um mehrere werte zu vergleichen, kann man einen operator mit in seine if-clause einfügen.
+- `||` Der oder Operator
+- `&&` Der und Operator
+
 ## 2. Switches
 
 Ein switch kann mehrere blocks mit code ausführen, und kann außerdem, wenn keine Kondition eintrifft, auf einen default code-block springen.

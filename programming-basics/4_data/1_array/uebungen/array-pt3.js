@@ -78,7 +78,7 @@ function wordRank(inputString)
         "p", "q", "r", "s", "t",
         "u", "v", "w", "x", "y",
         "z"
-    ]
+    ];
 
     for(let i = 0; i < words.length; i++)
     {

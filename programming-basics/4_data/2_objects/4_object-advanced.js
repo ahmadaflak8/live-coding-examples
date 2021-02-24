@@ -1,9 +1,13 @@
 
+// Wir können properties auch sonderzeichen geben, dafür geben wir sie als String ein.
 const testObject =
 {
     "ist fahrbereit": true,
-    "hallo!": 2,
+    "hallo!": [ "ersterEintrag", "zweiterEintrag" ],
     isAdmin: false
 }
 
-console.log(testObject["hallo!"]);
+// Hier ist es zwingend notwendig das wir die [] pattern nutzen, um die property anzusprechen.
+console.log(testObject["ist fahrbereit"]);
+console.log(testObject["hallo!"][0]);
+

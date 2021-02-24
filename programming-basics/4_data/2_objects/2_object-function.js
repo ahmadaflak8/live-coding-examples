@@ -7,15 +7,16 @@ const user =
     age: 25,
     country: "Germany",
     isAdmin: false,
-    fullName: function()
+    fullName()
     {
         return this.firstName + " " + this.lastName;
     },
-    isAdult: function(adultAge)
+    isAdult(adultAge)
     {
         return this.age > adultAge;
     }
 }
+
 
 // Innerhalb einer funktion steht "this" für den sogenannten "besitzer" des schlüssels den wir auslesen wollen.
 // this.firstName ist also ein schlüssel des objektes, auf das wir zugreifen wollen.

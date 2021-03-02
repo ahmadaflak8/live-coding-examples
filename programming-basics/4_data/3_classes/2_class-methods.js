@@ -1,27 +1,30 @@
-// https://nemisj.com/why-getterssetters-is-a-bad-idea-in-javascript/
-// https://javascript.info/property-accessors
-class User {
+
+class User
+{
     #firstName;
     #lastName;
-    
-    constructor(firstName, lastName) {
-      this.#firstName = firstName;
-      this.#lastName = lastName;
-      
-      this.fullName = this.#setFullName();
-    }
-    // um auf unsere werte zuzugreifen, können wir in javascript zwar einfach auf die werte zugreifen, aber sauberer ist es methoden fürs editieren, und anzeigen von werten zu schreiben. JavaScript besitzt auch sogenannte "getter/setter", diese sind aber nicht wirklich nützlich ohne typescript.
+    fullName;
 
-    // Vornamen ausgeben
+    constructor(firstName, lastName)
+    {
+        this.#firstName = firstName;
+        this.#lastName = lastName;
+
+        this.fullName = this.#createFullName();
+    }
+
+    // um auf unsere werte zuzugreifen, können wir in javascript zwar einfach auf die werte zugreifen, aber sauberer ist es methoden fürs editieren, und anzeigen von werten zu schreiben. JavaScript besitzt auch sogenannte "getter/setter".
+
+    // Vorname ausgeben
     get firstName()
     {
         return this.#firstName;
     }
 
-    // Vornamen definieren
-    set firstName(firstName)
+    // Vorname ändern
+    set firstName(input)
     {
-        this.#firstName = firstName;
+        this.#firstName = input;
     }
 
     // Vorname ausgeben
@@ -30,41 +33,39 @@ class User {
         return this.#firstName;
     }
 
-    // Vorname definieren
-    setFirstName(firstName)
+    // Vorname ändern
+    setFirstName(input)
     {
-        this.#firstName = firstName;
+        this.#firstName = input;
+    }
+
+    #createFullName()
+    {
+        return this.#firstName + " " + this.#lastName;
     }
 
     getFullName()
     {
         return this.fullName;
     }
-
-    #setFullName()
-    {
-        return this.#firstName + " " + this.#lastName;
-    }
-  }
+}
 
 const testNutzer = new User("Max", "Mustermann");
-console.log(testNutzer);
+
+console.log(testNutzer)
 
 testNutzer.firstName = "Katrin";
-
 console.log(testNutzer.firstName);
 
 testNutzer.setFirstName("Herbert");
-
 console.log(testNutzer.getFirstName());
 
 console.log(testNutzer.getFullName());
 
-console.log(testNutzer);
+const testNutzer2 = new User("Lamia", "Elmas");
+console.log(testNutzer2);
 
 console.log("=".repeat(50));
-
-// wir nutzen die zweite art, und benennen unsere methoden mit get... oder set... am anfang des methodennamens.
 
 /**
  * @class Fruit
@@ -77,9 +78,9 @@ class Fruit
 {
     /**
      * @constructor
-     * @param { string } name 
-     * @param { string } color 
-     * @param { string } taste 
+     * @param { string } name
+     * @param { string } color
+     * @param { string } taste
      */
     constructor(name, color, taste)
     {
@@ -99,9 +100,9 @@ class Fruit
     }
 
     /**
-     * @method setColor();
+     * @method setName();
      * @description Legt die Farbe der Frucht fest
-     * @param {string } name 
+     * @param { string } name 
      */
     setName(name)
     {
@@ -119,8 +120,8 @@ class Fruit
     }
 
     /**
-     * @method setTaste();
-     * @description Legt den Geschmack der Frucht fest
+     * @method setColor();
+     * @description Legt die Farbe der Frucht fest
      * @param {string } color 
      */
     setColor(color)
@@ -150,7 +151,7 @@ class Fruit
 
     /**
      * @method eat();
-     * @description Gibt einen String aus.
+     * @description gibt einen string aus
      * @returns { string }
      */
     eat()
@@ -160,11 +161,11 @@ class Fruit
 }
 
 const apple = new Fruit("Apple", "Red", "Sweet");
-console.log(apple.eat());
+console.log(apple.eat()); // This Red Apple is very Sweet
 
 apple.setColor("Green");
 
-console.log(apple.eat());
+console.log(apple.eat()); // This Green Apple is very Sweet
 
 const lemon = new Fruit("Lemon", "Yellow", "Sour");
-console.log(lemon.eat());
+console.log(lemon.eat()); // This Yellow Lemon is very Sour

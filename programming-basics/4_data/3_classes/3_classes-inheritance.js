@@ -39,9 +39,11 @@ class Bird extends Animal
     }
 }
 
-const rudy = new Bird("Rudy", "Parrot", true);
-console.log(rudy);
+// const rudy = new Bird("Rudy", "Parrot", true);
+// console.log(rudy);
 
-rudy.eat(); // Rudy is a Parrot and is eating...
-rudy.fly(); // Rudy can fly
-rudy.sleep(); // Rudy is sleeping // Rudy is dreaming...
+// rudy.eat(); // Rudy is a Parrot and is eating...
+// rudy.fly(); // Rudy can fly
+// rudy.sleep(); // Rudy is sleeping // Rudy is dreaming...
+
+module.exports = Animal;

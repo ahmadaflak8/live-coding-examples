@@ -244,4 +244,3 @@ const someCheck = numbersList.some(number =>
     return number > 0;
 });
 console.log("ein oder mehrere werte in numbersList[] sind größer als 0: ", someCheck);
-

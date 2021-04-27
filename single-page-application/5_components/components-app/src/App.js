@@ -1,4 +1,5 @@
-import { Header } from './components';
+import { Header, Footer, Page } from './components';
+
 import './App.css';
 
 function App() {
@@ -6,13 +7,9 @@ function App() {
     <>
       <Header/>
 
-      <main>
-        Unser Inhalt...
-      </main>
+      <Page/>
 
-      <footer>
-        Unser Footer
-      </footer>
+      <Footer/>
     </>
   );
 }

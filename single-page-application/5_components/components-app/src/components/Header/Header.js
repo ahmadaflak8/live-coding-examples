@@ -1,10 +1,10 @@
 import './Header.css';
 
-const Header = () =>
+const Header = (props) =>
 {
     return(
         <header className="Header">
-            <h1>Eine Webseite</h1>
+            <h1>{ props.title }</h1>
         </header>
     );
 }

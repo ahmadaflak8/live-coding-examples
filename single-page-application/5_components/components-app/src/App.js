@@ -2,10 +2,13 @@ import { Header, Footer, Page } from './components';
 
 import './App.css';
 
-function App() {
+function App()
+{
+  const pageTitle = "Unsere Webseite";
+
   return (
     <>
-      <Header/>
+      <Header title={ pageTitle }/>
 
       <Page/>
 

@@ -1,16 +1,17 @@
 import Counter from './Components/Counter';
 import Message from './Components/Message';
+import Room from './Components/Room';
 import Water from './Components/Water';
 
 function App() {
   return (
-    <div className="App">
-      <Water/>
+    <div>
+    <Counter initCount={5}/>
+      {/* <Water/>
 
       <br/>
       <br/>
 
-      <Counter initCount={5}/>
 
       <br/>
       <br/>
@@ -19,6 +20,11 @@ function App() {
           <h2>Hallo!!</h2>
           <i>Hallo, ich bin eine Nachricht</i>
       </Message>
+
+      <br/>
+      <br/> */}
+
+      <Room/>
     </div>
   );
 }

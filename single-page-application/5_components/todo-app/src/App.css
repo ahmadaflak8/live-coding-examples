@@ -1,0 +1,41 @@
+.App
+{
+  margin: 0 auto;
+  width: 250px;
+}
+
+ul
+{
+  padding: 0;
+  list-style: none;
+}
+
+li
+{
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+li .taskText
+{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+li button
+{
+  position: absolute;
+  right: 0;
+  height: 30px;
+  width: 30px;
+}
+.active
+{
+  background: tomato;
+}
+.finished
+{
+  background: lime;
+}

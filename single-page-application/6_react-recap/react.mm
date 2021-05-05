@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="React" FOLDED="false" ID="ID_638693524" CREATED="1618392674183" MODIFIED="1618392991250" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="0.701">
+<hook NAME="MapStyle" zoom="1.026">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -285,7 +285,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="Events" ID="ID_1300174690" CREATED="1618392853538" MODIFIED="1618392872632">
+<node TEXT="Events" FOLDED="true" ID="ID_1300174690" CREATED="1618392853538" MODIFIED="1618392872632">
 <node TEXT="Handling User Events" ID="ID_1705916085" CREATED="1618392835601" MODIFIED="1618412729857"><richcontent TYPE="NOTE">
 
 <html>

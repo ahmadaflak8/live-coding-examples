@@ -171,7 +171,21 @@
 
 </richcontent>
 </node>
-<node TEXT="State" ID="ID_1602818592" CREATED="1620206402394" MODIFIED="1620206404932"/>
+<node TEXT="State" ID="ID_1602818592" CREATED="1620206402394" MODIFIED="1620206637860"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      State kann einen initialen Wert haben.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 </node>
 </node>
 </map>

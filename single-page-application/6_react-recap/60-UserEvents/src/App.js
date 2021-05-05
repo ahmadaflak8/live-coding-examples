@@ -32,14 +32,31 @@ function Counter() {
   return (
     <div>
       <p>Count: {count}</p>
-      {/*<!-- <button onClick={() => setCount(count+1)}>click</button> -->*/}
+      <button onClick={() => setCount(count + 1)}>click</button>
       <button onClick={makeHandlerCountClickEvent(count, setCount)}>click</button>
+      <button onClick={makeHandlerCountClickEventWithFunctionKeyword(count, setCount)}>click</button>
     </div>
   )
 }
 
+/**
+ * Higher Order Function returning a function
+ * @param {} count 
+ * @param {*} setCount 
+ * @returns a callback function
+ */
 function makeHandlerCountClickEvent(count, setCount) {
-  return () => setCount(count+1)
+  return () => setCount(count + 1);
+}
+
+function makeHandlerCountClickEventWithFunctionKeyword(count, setCount) {
+  const f = function () {
+    let newValue = count + 1;
+    console.log(newValue);
+    setCount(newValue);
+  }
+
+  return f;
 }
 
 export default App;

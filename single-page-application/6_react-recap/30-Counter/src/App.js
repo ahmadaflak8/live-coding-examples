@@ -33,9 +33,34 @@ function Counter() {
     <div>
       <p>Count: {count}</p>
       <button onClick={() => setCount(count + 1)}>click</button>
-      <SubComponent count={count} />
+      <ClickSubComponent countP={count} setCountP={setCount} />
+      <SubComponent countP={count} />
     </div>
   )
+}
+
+function ClickSubComponent({ countP, setCountP }) {
+  return (
+    <div>
+      <button onClick={() => setCountP(countP + 1)}>click from ClickSubComponent</button>
+    </div>
+  );
+}
+
+function SubComponent({ countP }) {
+  return (
+    <div>
+      <SubSubComponent countP2={countP} />
+    </div>
+  );
+}
+
+function SubSubComponent({ countP2 }) {
+  return (
+    <div>
+      SubSubCompontent: {countP2}
+    </div>
+  );
 }
 
 export default App;

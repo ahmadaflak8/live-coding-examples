@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <h1>React Forms</h1>
       <div>
-        state-variable gender: {gender}
+        State-Variable Gender: {gender}
       </div>
 
       <hr />
@@ -51,7 +51,7 @@ function GenderSelector({ setGender }) {
           <option value="weiblich">weiblich</option>
         </select>
       </label>
-      <br/>
+      <br />
       <br />
       <input type="reset" value="Reset" />
       <input type="submit" value="Submit" />

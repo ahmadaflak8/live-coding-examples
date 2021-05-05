@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <h1>React Forms</h1>
       <div>
-        state-variable name: {name}
+        State-Variable Name: {name}
       </div>
 
       <hr />
@@ -46,7 +46,7 @@ function NameForm({ setName }) {
         Name:
         <input type="text" value={value} onChange={handleChange} />
       </label>
-      <br/>
+      <br />
       <br />
       <input type="reset" value="Reset" />
       <input type="submit" value="Submit" />

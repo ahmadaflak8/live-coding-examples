@@ -21,14 +21,14 @@ function App() {
       <hr />
       <br />
 
-      <NameForm setName={setName} setDescription={setDescription}/>
+      <NameForm setName={setName} setDescription={setDescription} />
     </div>
   );
 }
 
 function NameForm({ setName, setDescription }) {
   const defaultState = {
-    name: '',
+    fullname: '',
     description: ''
   };
   let [localState, setLocalState] = React.useState(defaultState);
@@ -36,15 +36,16 @@ function NameForm({ setName, setDescription }) {
   const handleChange = (event) => {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
-    const name = target.name;
 
     let newState = {};
     Object.assign(newState, localState);
-    newState[name] = value;
+    Object.seal(newState); // prevent addition of new attributes, therefore enable early detection of spelling errors
+
+    newState[target.name] = value;
 
     setLocalState(newState);
 
-    console.log('handle change');
+    console.log('change handled');
   }
 
   const handleReset = (event) => {
@@ -54,8 +55,8 @@ function NameForm({ setName, setDescription }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('submit handled with value: ' + localState.name);
-    setName(localState.name);
+    console.log('submit handled with value: ' + localState);
+    setName(localState.fullname);
     setDescription(localState.description);
   }
 
@@ -63,7 +64,7 @@ function NameForm({ setName, setDescription }) {
     <form onSubmit={handleSubmit} onReset={handleReset}>
       <label>
         Name:
-        <input name="name" type="text" value={localState.name} onChange={handleChange} />
+        <input name="fullname" type="text" value={localState.fullname} onChange={handleChange} />
       </label>
       <br />
       <br />
@@ -71,7 +72,7 @@ function NameForm({ setName, setDescription }) {
         Beschreibung:
         <textarea name="description" value={localState.description} onChange={handleChange} />
       </label>
-      <br/>
+      <br />
       <br />
       <input type="reset" value="Reset" />
       <input type="submit" value="Submit" />

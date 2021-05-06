@@ -37,7 +37,7 @@ function NameForm({ setName, setDescription }) {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
 
-    let newState = {};
+    let newState = {}; // React needs the reference to change => new Object needed
     Object.assign(newState, localState);
     Object.seal(newState); // prevent addition of new attributes, therefore enable early detection of spelling errors
 

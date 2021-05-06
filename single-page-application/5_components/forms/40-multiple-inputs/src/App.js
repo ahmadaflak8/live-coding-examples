@@ -22,13 +22,14 @@ function NameForm() {
   const handleChange = (event) => {
     let newState = {};
     Object.assign(newState, localState);
+    Object.seal(newState); // verhindert, dass neue Attribute hinzugefügt werden
+    // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
     /*
     newState = {
       fullname: '',
       description: ''
     }
     */
-    //   Name des aktuellen "targets"     Wert des ausgewählten "targets"
     /* ausgehend von einem leeren Formular 
        und für 
        event.target.name == "fullname"
@@ -38,7 +39,7 @@ function NameForm() {
     newState[event.target.name] = event.target.value;
     /*
     newState = {
-      fullname: '',
+      fullname: 'Albert',
       description: ''
     }
     */
@@ -71,7 +72,7 @@ function NameForm() {
       <form onReset={handleReset} onSubmit={handleSubmit}>
         <label>
           Name:
-          <input name="fullnameeee" type="text" value={localState.fullname} onChange={handleChange} />
+          <input name="fullname" type="text" value={localState.fullname} onChange={handleChange} />
         </label>
         <br />
         <br />

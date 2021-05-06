@@ -1,6 +1,10 @@
+input {
+  margin-left: 1ex;
+}
+
 .App {
-  padding: 1em;
   text-align: left;
+  padding: 1em;
 }
 
 .App-logo {

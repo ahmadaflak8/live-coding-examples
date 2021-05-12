@@ -1,10 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './App.css';
 
 function App()
 {
   const [ tasks, setTasks ] = useState([]);
   const [ inputText, setInputText ] = useState("");
+
+  // Lade vorhandene tasks aus der localstorage
+  useEffect(() =>
+  {
+      const savedTasks = window.localStorage.getItem('tasks');
+
+      setTasks(JSON.parse(savedTasks));
+  }, []);
+
+  // Speichere aktuelle tasks in die localstorage
+  useEffect(() =>
+  {
+      const currentTasks = JSON.stringify(tasks);
+      window.localStorage.setItem('tasks', currentTasks);
+  }, [tasks]);
+
+  // Wichtig, erst laden, dann speichern.
 
   /**
    * @method createId();

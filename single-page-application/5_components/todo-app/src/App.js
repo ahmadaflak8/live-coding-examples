@@ -2,9 +2,17 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 function App()
 {
-    const [tasks, setTasks] = useState([]);
-    const [inputText, setInputText ] = useState("");
+    const [ tasks, setTasks] = useState([]);
+    const [ inputText, setInputText ] = useState("");
     const [ selectedTaskText, setSelectedTaskText ] = useState("");
+    const [ currentTime, setCurrentTime ] = useState(new Date().getTime());
+
+    // setzt einen interval für die aktuelle zeit
+    useEffect(() =>
+    {
+        setInterval(() => setCurrentTime(new Date().getTime()), 1000);
+    }, []);
+
     useEffect(() =>
     {
         const oldTasks = JSON.parse(window.localStorage.getItem('tasks'));
@@ -15,11 +23,17 @@ function App()
         });
         setTasks(oldTasks);
     }, []);
+
     useEffect(() =>
     {
-        const currentTasks = JSON.stringify(tasks);
+        const existingTasks = tasks.filter(task => task.timestamp > currentTime);
+
+        const currentTasks = JSON.stringify(existingTasks);
         window.localStorage.setItem('tasks', currentTasks);
+
+        console.log(tasks);
     }, [tasks]);
+
     /**
      * @method createId();
      * @description Gibt eine zufällige ID zurück.
@@ -29,6 +43,7 @@ function App()
     {
         return Math.random().toString(16).substr(2, 8); // 254e82e3
     }
+
     /**
      * @method addTask();
      * @description Fügt eine neue task ein.
@@ -39,12 +54,14 @@ function App()
             id: createId(),
             text: inputText,
             isFinished: false,
-            isEditable: false
+            isEditable: false,
+            timestamp: new Date().getTime() + 15000,
         }
         console.log(newTask);
         setTasks(tasks => [...tasks, newTask]);
         setInputText("");
     }
+
     /**
      * @method toggleTask();
      * @description Schaltet den zustand eines tasks um.
@@ -65,6 +82,7 @@ function App()
             setTasks([currentTask, ...otherTasks ]);
         }
     }
+
     /**
      * @method deleteTask();
      * @description Löscht ein element aus der task array anhand der übergebenen ID
@@ -75,6 +93,7 @@ function App()
     {
         setTasks(tasks => tasks.filter(task => task.id !== id));
     }
+
     /**
      * @method handleNewTaskInput();
      * @description Behandelt die eingabe des input elements.
@@ -84,6 +103,7 @@ function App()
     {
         setInputText(e.target.value);
     }
+
     const toggleHandleEdit = (e, id) =>
     {
         const currentTasks = tasks.map(task =>
@@ -94,6 +114,7 @@ function App()
         setSelectedTaskText(() => tasks.filter(task => task.id === id)[0].text);
         setTasks(() => currentTasks);
     }
+
     const saveTask = (e, id) =>
     {
         const currentTasks = tasks.map(task =>
@@ -107,6 +128,7 @@ function App()
         });
         setTasks(() => currentTasks);
     }
+
     return (
         <div className="App">
             <h1>Todo App</h1>
@@ -115,6 +137,9 @@ function App()
                 <input onChange={ handleNewTaskInput } type="text" value={ inputText }></input>
                 <button className="addButton" onClick={ addTask }>Add</button>
             </div>
+
+            { currentTime }
+
             <h3>Aufgaben</h3>
             {
                 tasks.length > 0 ?
@@ -122,32 +147,35 @@ function App()
                     {
                         tasks.map((task, i) =>
                         {
-                            return (
-                                <li key={ i } className={ task.isFinished ? 'finished' : 'active' }>
-                                    {
-                                        task.isEditable ? 
-                                        (
-                                            <div className="editTaskSection">
-                                                <input value={ selectedTaskText } onChange={ (e) => setSelectedTaskText(e.target.value) }/>
-                                                <button className="saveButton" onClick={(e) => saveTask(e, task.id)}>&#x2714;</button>
-                                                <button className="deleteButton" onClick={(e) => deleteTask(e, task.id)}>X</button>
-                                            </div>
-                                        )
-                                        :
-                                        (
-                                            <div className="viewTaskSection">
-                                                <span className="taskText" onClick={ (e) => toggleTask(e, task.id) }>
-                                                { 
-                                                    task.text
-                                                }
-                                                </span>
-                                                <button className="editButton" onClick={ (e) => toggleHandleEdit(e, task.id)}>&#x270E;</button>
-                                                <button className="deleteButton" onClick={(e) => deleteTask(e, task.id)}>X</button>
-                                            </div>
-                                        )
-                                    }
-                                </li>
-                            )
+                            if(task.timestamp > currentTime)
+                            {
+                                return (
+                                    <li key={ i } className={ task.isFinished ? 'finished' : 'active' }>
+                                        {
+                                            task.isEditable ? 
+                                            (
+                                                <div className="editTaskSection">
+                                                    <input value={ selectedTaskText } onChange={ (e) => setSelectedTaskText(e.target.value) }/>
+                                                    <button className="saveButton" onClick={(e) => saveTask(e, task.id)}>&#x2714;</button>
+                                                    <button className="deleteButton" onClick={(e) => deleteTask(e, task.id)}>X</button>
+                                                </div>
+                                            )
+                                            :
+                                            (
+                                                <div className="viewTaskSection">
+                                                    <span className="taskText" onClick={ (e) => toggleTask(e, task.id) }>
+                                                    { 
+                                                        task.text
+                                                    }
+                                                    </span>
+                                                    <button className="editButton" onClick={ (e) => toggleHandleEdit(e, task.id)}>&#x270E;</button>
+                                                    <button className="deleteButton" onClick={(e) => deleteTask(e, task.id)}>X</button>
+                                                </div>
+                                            )
+                                        }
+                                    </li>
+                                )
+                            }
                         }).reverse()
                     }
                 </ul>

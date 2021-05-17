@@ -55,10 +55,10 @@ function App()
             text: inputText,
             isFinished: false,
             isEditable: false,
-            timestamp: new Date().getTime() + 15000,
+            timestamp: new Date().getTime() + 60000,
         }
         console.log(newTask);
-        setTasks(tasks => [...tasks, newTask]);
+        setTasks([...tasks, newTask]);
         setInputText("");
     }
 
@@ -111,6 +111,7 @@ function App()
             const selectedTask = task.id === id ? task.isEditable = true : task.isEditable = false;
             return { ...task, selectedTask };
         });
+
         setSelectedTaskText(() => tasks.filter(task => task.id === id)[0].text);
         setTasks(() => currentTasks);
     }
@@ -137,8 +138,6 @@ function App()
                 <input onChange={ handleNewTaskInput } type="text" value={ inputText }></input>
                 <button className="addButton" onClick={ addTask }>Add</button>
             </div>
-
-            { currentTime }
 
             <h3>Aufgaben</h3>
             {

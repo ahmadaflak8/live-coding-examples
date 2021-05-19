@@ -1,10 +1,10 @@
-import './App.css';
 import React from 'react';
+import './App.css';
 
 // sample code from:
 // https://www.react.express/hooks/usereducer
 
-const types = {
+const TYPE = {
   PET: 'PET',
   COLOR: 'COLOR',
 };
@@ -28,10 +28,12 @@ const initialState = {
 
 const petReducer = (state, action) => {
   switch (action.type) {
-    case types.PET:
+    case TYPE.PET:
       return { ...state, pet: action.value }
-    case types.COLOR:
+    case TYPE.COLOR:
       return { ...state, color: action.value }
+    default:
+      console.error("error: not implemented");
   }
 }
 
@@ -45,7 +47,7 @@ function App() {
       <select
         value={state.color}
         onChange={event => {
-          dispatchState({ type: types.COLOR, value: event.target.value })
+          dispatchState({ type: TYPE.COLOR, value: event.target.value })
         }}
       >
         <option value={COLORS.BLACK}>{COLORS.BLACK}</option>
@@ -55,7 +57,7 @@ function App() {
       <select
         value={state.pet}
         onChange={event => {
-          dispatchState({ type: types.PET, value: event.target.value })
+          dispatchState({ type: TYPE.PET, value: event.target.value })
         }}
       >
         <option value={PETS.CAT}>{PETS.CAT}</option>
@@ -64,6 +66,7 @@ function App() {
       </select>
       <br />
       <br />
+      <hr />
       Deine Auswahl:
       <dl>
         <dt>Farbe:</dt><dd>{state.color}</dd>

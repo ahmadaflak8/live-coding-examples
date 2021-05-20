@@ -1,5 +1,5 @@
 {
-  "name": "00-template",
+  "name": "30-ThemedButton-with-Context",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,5 +1,5 @@
 {
-  "name": "00-template",
+  "name": "62-useReducer-common-state-object",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

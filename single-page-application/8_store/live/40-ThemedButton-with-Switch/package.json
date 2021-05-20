@@ -1,5 +1,5 @@
 {
-  "name": "00-template",
+  "name": "40-ThemedButton-with-Switch",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

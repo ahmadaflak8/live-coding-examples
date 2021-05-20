@@ -1,5 +1,5 @@
 {
-  "name": "00-template",
+  "name": "61-useReducer-dynamic-behaviour",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

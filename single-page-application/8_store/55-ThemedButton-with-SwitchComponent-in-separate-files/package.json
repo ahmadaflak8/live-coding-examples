@@ -1,5 +1,5 @@
 {
-  "name": "00-template",
+  "name": "55-ThemedButton-with-SwitchComponent-in-separate-files",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

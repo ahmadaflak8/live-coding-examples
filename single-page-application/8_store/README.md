@@ -1,5 +1,16 @@
 # State
 
+## File Structure
+
+```
+|
+|- ./exercise		# exercise descriptions
+|- ./illustrations	# illustrations and photos of whiteboard
+|- ./live			# live coded code
+|- ./prep 			# prepared code
+|- README.md 		# this file
+```
+
 ## Links
 
 ### State Containers

@@ -1,4 +1,4 @@
-# Deployment
+# Auslieferung / Deployment
 
 - Welche Rolle spielt ein Server bei einer Single-Page-Application, die komplett auf dem Client ausgeführt wird?
 - Was ist ein Webserver?
@@ -19,11 +19,27 @@ https://github.com/thomas-hofmann-dci/workshop-docker-intro
 https://github.com/thomas-hofmann-dci/workshop-docker-compose
 
 ### Hosting Services
+
+### (Virtual) Server
+#### DigitalOcean
+https://www.digitalocean.com/
+
+#### Hetzner
+https://www.hetzner.com
+(Cloud/...)
+
+#### Kamp
+https://www.kamp.de
+(DHP Minipaket)
+
 #### Firebase
 https://firebase.google.com/
 
 #### Github-Pages
 https://pages.github.com/
+
+  ##### JS-Package: "gh-pages"
+  https://www.npmjs.com/package/gh-pages?activeTab=readme
 
 #### Heroku
 https://www.heroku.com/
@@ -38,9 +54,6 @@ https://www.netlify.com/
 
 #### Vercel
 https://vercel.com/
-
-#### JS-Package: "gh-pages"
-https://www.npmjs.com/package/gh-pages?activeTab=readme
 
 ---
 
@@ -58,6 +71,7 @@ original: https://github.com/DigitalCareerInstitute/SPA-todo-app/blob/stage/07-d
 
       erreichbar ist.
 
+
 2. Erstelle innerhalb des Projektordners ein React-Projekt:
    ```
    $> npx create-react-app NAME_DES_REACT_PROJEKTS
@@ -74,7 +88,7 @@ original: https://github.com/DigitalCareerInstitute/SPA-todo-app/blob/stage/07-d
       ```
     - füge 2 Skripte zum "scripts"-Objekt in der `packages.json` hinzu:
       ```
-      "predeploy":"npm run build"
+      "predeploy":"npm run build",
       "deploy":"gh-pages -d build"
       ```
 

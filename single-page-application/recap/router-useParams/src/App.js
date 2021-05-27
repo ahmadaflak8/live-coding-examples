@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
-import { useLocation, useHistory, useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 
 function App() {
   return (
@@ -12,17 +12,14 @@ function App() {
             <span> | </span>
             <Link to="/project/1">Project 1</Link>
             <span> | </span>
-            <Link to="/category/1">Category 1</Link>
+            <Link to="/category/animation">Zeichentrick</Link>
             <span> | </span>
-            <Link to="/category/1/2">Category 1/2</Link>
+            <Link to="/category/animation/12">Zeichentrick bis 12 Jahre</Link>
           </aside>
           <main>
-            <Route path="/project/:id">
-              <SingleProject />
-            </Route>
-            <Route path="/category/:id/:subid?">
-              <Category />
-            </Route>
+            <Route path="/project/:id?" component={SingleProject} />
+
+            <Route path="/category/:genre/:maxAge?" component={Category} />
           </main>
         </div>
       </Router>
@@ -44,14 +41,15 @@ function SingleProject() {
 }
 
 function Category() {
-  const location = useLocation();
-  const { id, subid } = useParams();
+  //const location = useLocation();
+  const { genre, maxAge } = useParams();
+  // optional: API-Request mit "genre und maxAge"
   return (
     <div>
       <h2>Category</h2>
-      id/subid: {id}
+      genre: {genre}
       <br />
-      subid: {subid ? subid : "undefined"}
+      maxAge: {maxAge ? maxAge : "undefined"}
     </div>
   );
 }

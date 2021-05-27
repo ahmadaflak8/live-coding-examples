@@ -18,6 +18,8 @@ https://reactrouter.com/web/example/query-parameters
 ## useState
 See Flavio Copes "The React Beginners Handbook" (page 25/26 ff.)
 
-## useContext
+## Context in React
+https://reactjs.org/docs/context.html
+
 See live-coding-repo: SPA / 8_store-state:
 - 30-ThemedButton-with-Context

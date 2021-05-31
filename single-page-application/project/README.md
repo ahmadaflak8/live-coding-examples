@@ -40,7 +40,7 @@
 
 #### Umsetzung/Implementierung
   - Struktur
-  - Technologie
+  - Werkzeuge und Technologien
   - Gestaltung/Design
 
 #### Live Vorführung

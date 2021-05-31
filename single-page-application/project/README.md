@@ -1,7 +1,7 @@
 # Projekt
 
 ## Ablauf
-### 2021-05-27 Erste Projektideen und Gruppenbildung
+### 2021-05-27 - Erste Projektideen und Gruppenbildung
 ### ... Projektarbeit ...
 ### 2021-06-10 - Abschlusspräsentation
 
@@ -11,7 +11,7 @@
 
 09:00-09:15 Standup
 
-09:00-09:30 Projekte-Standup
+09:00-09:30 Projekte-Standup:
 
     - Stand
     - Tagesplan
@@ -21,7 +21,7 @@
 
 ... Projektarbeit ...
 
-13:00-13:15 Nachmittagsstandup
+13:30-13:45 Nachmittagsstandup
 
 ... Projektarbeit ...
 

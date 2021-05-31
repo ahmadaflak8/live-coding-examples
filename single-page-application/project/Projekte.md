@@ -17,9 +17,9 @@ Erschließen von Informationen, die über die API einer existierenden Movie-Data
 
 ---
 
-## Rechteverwaltung
+## Rechteverwertung
 
-Initial: Rechteverwaltung für Musikstücke
+Initial: Rechteverwertung für Musikstücke
 
 ### Team
 - Alex (S)

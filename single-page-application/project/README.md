@@ -54,4 +54,8 @@
 ### Project-Timeline
 https://docs.google.com/presentation/d/1LKaB6bn3q6ZLudeQbDzPcFqs0c7QeBw28hIkvmwGYCg/edit#slide=id.gdce2bb8766_0_45
 
+### Git-Workflow
+
+https://t3n.de/news/git-workflows-zusammenarbeit-1095433/
+
 ---

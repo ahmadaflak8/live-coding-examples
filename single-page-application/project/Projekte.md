@@ -8,6 +8,9 @@ Sprecherin/Sprecher mit (S) markiert.
 
 Erschließen von Informationen, die über die API einer existierenden Movie-Database, abgefragt werden.
 
+2021-06-02 - Architekturfragen
+		   - Github-Probleme (Julia, Katerina)
+
 ### Team
 - Christian (S)
 - Julia
@@ -31,6 +34,8 @@ Initial: Rechteverwertung für Musikstücke
 
 ## Zeiterfassung
 System zur Erfassung von Arbeitszeiten.
+
+2021-06-02 - Planung passt, läuft.
 
 ### Team
 - Ahmad

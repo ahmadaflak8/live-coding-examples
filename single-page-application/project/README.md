@@ -31,6 +31,9 @@
 
 ## Abschlusspräsentation (30 min)
 ### Inhalt
+#### Projekt
+  - Kurzbeschreibung
+
 #### Projektteam
   - Rollen/Arbeitsschwerpunkte
 

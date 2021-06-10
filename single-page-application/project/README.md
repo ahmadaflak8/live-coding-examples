@@ -35,6 +35,7 @@
   - Rollen/Arbeitsschwerpunkte
 
 #### Projektbeschreibung
+  - Thema
   - Nutzer
   - Funktionalität
 

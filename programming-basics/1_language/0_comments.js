@@ -24,3 +24,19 @@
  * new
  * line
  */
+
+/**
+ * Dies ist ein Kommentar.
+ */
+
+/**
+ * @function testFunktion
+ * @description Dies ist unsere testFunktion
+ * @param { string } testWert1 ist unser übergebener string
+ * @param { number } testWert2 ist unsere nummer mit der wir vergleichen
+ * @returns { string }
+ */
+function testFunktion(testWert1, testWert2)
+{
+
+}
